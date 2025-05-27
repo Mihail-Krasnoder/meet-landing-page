@@ -1,0 +1,179 @@
+@use 'variables' as *;
+
+.hero{
+    margin: 64px 32px 32px 32px;
+    max-width: calc(100% - 64px);
+    .photos{
+        height: 160px;
+        @include flex1;
+        flex-direction: column;
+        justify-content: space-between;
+        .line{
+            display: flex;
+            gap: 17px;
+            .photo{
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            overflow-x: hidden;
+            }
+        }
+        .line1{
+        .photo:nth-child(odd){
+            display: inline-block;
+            transform: translateY(40%);
+        }
+       }
+       .line2{
+        .photo:nth-child(even){
+            display: inline-block;
+            transform: translateY(-40%);
+        }
+       }
+
+      }
+    
+    .heading{
+        text-align: center;
+        h1{
+            color: $slate-900;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 850;
+            line-height: 110%;
+            margin-top: 45px;
+            margin-bottom: 24px;
+        }
+        p{
+            color: $slate-600;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            margin-bottom: 24px;
+        }
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        .button{
+            border-radius: 29px;
+            padding: 16px 40px 16px 40px;
+            width: fit-content;
+            border: none;
+            color: $white;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 150%;
+            transition: transform 0.25s ease;
+            .version{
+                color: $cyan-300;
+            }
+            &:hover{
+                transform: scale(1.1);
+                .label{
+                    transform: scale(0.9091);
+                }
+            }
+            .label{
+                display: inline-block;
+                transition: transform 0.25s ease;
+            }
+        }
+        .button1{
+            background-color: $cyan-600;
+        }
+        .button2{
+            background-color: $purple-600;
+        }
+    }
+}
+
+.main-content{
+    margin: 32px 32px 64px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: calc(100% - 64px);
+    gap: 64px;
+    .objects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+         .rectangle{
+            background-color: $slate-300;
+            width: 1px;
+            height: 80px;
+         }
+         .circle{
+            width: 56px;
+            height: 56px;
+            @include flex1;
+            border-radius: 999px;
+            border: 1px solid $slate-300;
+         }
+    }
+    .pictures-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 16px;
+        box-sizing: border-box;
+        .item{
+            height: 130px;
+            width: 130px;
+            border-radius: 12px;
+        }
+        .item1{
+            background: url('/pictures/9cf4e3d15f63dca9325cd80d0a7610d3408745b9.png') lightgrey 50% / cover no-repeat;
+        }
+        .item2{
+            background: url('/pictures/427a7a3fddcb1ed0964eb58d20498d9a98aa9103.png') lightgrey 50% / cover no-repeat;
+        }
+        .item3{
+            background: url('/pictures/7884afd0ebd4762a654b9c7296ca0bb93743e535.png') lightgrey 50% / cover no-repeat;
+        }
+        .item4{
+            background: url('/pictures/0ee297b25d40a95697c8bfd19646b700ba7bb03a.png') lightgrey 50% / cover no-repeat;
+        }
+    }
+    .main-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h3{
+            margin: 0 0 16px 0;
+            color: $cyan-600;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 110%;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        h2{
+            margin: 0 0 32px 0;
+            color: $slate-900;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 110%;
+        }
+        p{
+            margin: 0;
+            color: $slate-600;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+        }
+    }
+}

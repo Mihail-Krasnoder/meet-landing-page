@@ -1,0 +1,156 @@
+@use 'variables' as *;
+@use 'nav' as *;
+@use 'hero' as *;
+@use 'footer' as *;
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    font-family: $font-family;
+    font-size: 16px;
+    @include flex1;
+    flex-direction: column;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (min-width: 600px){
+    .hero{
+        @include flex1;
+        flex-direction: column;
+        margin: 64px 32px;
+        .photos{
+            height: 300px;
+            .line{
+                gap: 28px;
+                .photo{
+                    width: 110px;
+                    height: 110px;
+                }
+            }
+        }
+        .heading{
+            width: 60%;
+            h1{
+                font-size: 48px;
+                font-weight: 900;
+            }
+        }
+        .buttons{
+            flex-direction: row;
+        }
+    }
+    .main-content{
+        margin: 56px 32px 64px 32px;
+        .pictures-grid{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            gap: 24px;
+            .item{
+                width: 150px;
+                height: 150px;
+            }
+        }
+        .main-text{
+            width: 65%;
+            h3{
+                font-size: 14px
+            }
+            h2{
+                width: 60vw;
+                font-size: 36px;
+            }
+        }
+    }
+    .footer-cta{
+        width: 100vw;
+        .footer-description{
+            width: 100%;
+            h2{
+                width: 65vw;
+                font-size: 36px;
+            }
+            p{
+                width: 65vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav{
+        padding: 80px 80px 0 80px;
+    }
+    .hero{
+        @include flex1;
+        flex-direction: column;
+        margin: 64px 32px;
+        .photos{
+            gap: 20px;
+            height: 350px;
+            .line{
+                gap: 48px;
+                .photo{
+                    width: 130px;
+                    height: 130px;
+                }
+        }
+        }
+        .heading{
+        margin-top: 20px;
+        h1{
+            font-size: 64px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    }
+    .main-content{
+        max-width: 1120px;
+        .pictures-grid{
+            .item{
+                width: 256px;
+                height: 256px;
+            }
+        }
+        .main-text{
+            width: 50%;
+            h3{
+                font-size: 16px;
+            }
+            h2{
+                font-size: 40px;
+                width: 90%;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .footer-cta{
+        .footer-description{
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 112px 80px;
+            gap: 32px;
+            h2{
+                width: 30vw;
+            }
+            p{
+                width: 25vw;
+            }
+            .button{
+                width: 200px;
+            }
+        }
+    }
+}

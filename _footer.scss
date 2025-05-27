@@ -1,0 +1,75 @@
+@use 'variables' as *;
+
+.footer-cta{
+        @include flex1;
+        flex-direction: column;
+        .objects-2{
+            @include flex1;
+            flex-direction: column;
+            .rectangle-2{
+                background: $slate-300;
+                width: 1px;
+                height: 80px;
+            }
+            .circle-2{
+                width: 56px;
+                height: 56px;
+                @include flex1;
+                flex-direction: column;
+                border-radius: 999px;
+                background: $white;
+                border: 1px solid $slate-300;
+                z-index: 10;
+            }
+        }
+        .footer-description{
+            @include flex1;
+            flex-direction: column;
+            text-align: center;
+            background: url('/pictures/bad7059bb6979290f3e47576e247d35e84c342a9.png') lightgray 50% / cover no-repeat;
+            padding: 64px 32px;
+            gap: 24px;
+            color: $white;
+            margin-top: -28px;
+            z-index: 5;
+            h2{
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 110%;
+                margin: 0;
+            }
+            p{
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                margin: 0;
+            }
+            .button{
+                padding: 16px 40px;
+                border-radius: 29px;
+                background: $purple-600;
+                border: none;
+                color: $white;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 150%;
+                transition: transform 0.25s ease;
+                .version{
+                    color: $purple-300;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                    .label{
+                        transform: scale(0.9091);
+                    }
+                }
+                .label{
+                    transition: transform 0.25s ease;
+                    display: inline-block;
+                }
+            }
+        }
+    }

@@ -1,0 +1,7 @@
+@use 'variables' as *;
+
+.nav{
+@include flex1;
+gap: 8px;
+padding-top: 48px;
+}
